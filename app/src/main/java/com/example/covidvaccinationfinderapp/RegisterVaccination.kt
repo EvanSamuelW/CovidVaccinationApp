@@ -31,7 +31,6 @@ class RegisterVaccination : Fragment() {
 
         val location = arguments?.getString("name")
 
-        Toast.makeText(context,location,Toast.LENGTH_LONG).show()
         scheduleViewModel = ViewModelProvider(this).get(ScheduleViewModel::class.java)
         _binding = FragmentRegisterVaccinationBinding.inflate(inflater, container, false)
         val root: View = binding.root
