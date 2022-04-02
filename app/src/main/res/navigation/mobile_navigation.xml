@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.covidvaccinationfinderapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.example.covidvaccinationfinderapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_location_to_registerVaccination"
+            app:destination="@id/registerVaccination" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.example.covidvaccinationfinderapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/registerVaccination"
+        android:name="com.example.covidvaccinationfinderapp.RegisterVaccination"
+        android:label="RegisterVaccination" >
+        <action
+            android:id="@+id/action_registerVaccination_to_navigation_schedule"
+            app:destination="@id/navigation_schedule" />
+    </fragment>
+</navigation>
