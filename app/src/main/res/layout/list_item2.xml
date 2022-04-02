@@ -46,20 +46,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
+        android:layout_weight="1"
         android:textStyle="bold"
         android:layout_marginEnd="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ln1"/>
-    <TextView
-        android:id="@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ln1"/>
-  </LinearLayout>
 
+  </LinearLayout>
+  <TextView
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:layout_weight="1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/ln2"/>
 
 
   <View
@@ -67,7 +69,7 @@
       android:layout_height="1dp"
       android:layout_margin="8dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/ln2"
+      app:layout_constraintTop_toBottomOf="@id/location"
       android:background="#D8D6D6">
 
     </View>

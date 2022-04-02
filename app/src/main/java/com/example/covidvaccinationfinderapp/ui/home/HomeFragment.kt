@@ -64,13 +64,6 @@ class HomeFragment : Fragment() {
         retrofitData.enqueue(object : Callback<CovidData> {
             override fun onResponse(call: Call<CovidData>, response: Response<CovidData>) {
                 val responseBody = response.body()!!
-//                val myStringBuilder = StringBuilder()
-//                myStringBuilder.append(responseBody.update.penambahan.jumlah_positif)
-//                myStringBuilder.append(responseBody.update.penambahan.jumlah_meninggal)
-//                myStringBuilder.append(responseBody.update.penambahan.jumlah_sembuh)
-
-
-//                myStringBuilder.append(responseBody.update.harian.last())
                 val textView1: TextView = binding.jumlahpositif
                 val textView2: TextView = binding.jumlahsembuh
                 val textView3: TextView = binding.jumlahmati
